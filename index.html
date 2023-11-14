@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles/style.css">
-  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
     <header class="container mx-auto header bg-white flex items-center justify-between px-8 py-5">
@@ -13,7 +12,7 @@
             <img src="./images/logo.png" alt="" width="150">
         </h1>
         <!-- Search -->
-    <form class="flex items-center">   
+    <form class="flex items-center form-width">   
         <label for="simple-search" class="sr-only">Search</label>
             <input type="text" id="simple-search" class="bg-gray-50 border border-red-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 w-full p-2.5  dark:bg-red-700 dark:border-red-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search items..." required>
         <button type="submit" class="p-2.5 ml-3 text-md font-medium text-white bg-red-300 rounded-lg border border-red-300 hover:bg-red-300 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">
@@ -54,6 +53,10 @@
         </div>
     </div>
     </div>
+
+    <!-- Dropdown -->
+    
+    
     
 
     <!-- Bestsellers -->
@@ -62,7 +65,7 @@
 </div>
 <div class="flex container mx-auto">  
 <div class="m-5 w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-    <a href="#">
+    <a href="/product.html">
         <img class="p-8 rounded-t-lg" src="./images/4800016642029.jpg" alt="product image" />
     </a>
     <div class="px-5 pb-5">
@@ -586,30 +589,6 @@
     </div>  
 </div>
 
-<!-- Shop by Category -->
-<div class="container mx-auto">
-    <h1 class="m-5 py-5 text-4xl font-bold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Shop by Categories</h1>
-<div class="py-5 mt-5 grid grid-cols-2 md:grid-cols-3 gap-10 items-center">
-    <div>
-        <img class="h-auto max-w-full rounded-lg" src="./images/Canned Goods.png" alt="">
-    </div>
-    <div>
-        <img class="h-auto max-w-full rounded-lg" src="./images/Beverages.png" alt="">
-    </div>
-    <div>
-        <img class="h-auto max-w-full rounded-lg" src="./images/Cigarettes.png" alt="">
-    </div>
-    <div>
-        <img class="h-auto max-w-full rounded-lg" src="./images/Condiments.png" alt="">
-    </div>
-    <div>
-        <img class="h-auto max-w-full rounded-lg" src="./images/Snacks.png" alt="">
-    </div>
-    <div>
-        <img class="h-auto max-w-full rounded-lg" src="./images/Sweets.png" alt="">
-    </div>
-</div>
-</div>
 
 <!-- Footer -->
 
@@ -657,4 +636,5 @@
 
     
 </body>
+    <script src="https://cdn.tailwindcss.com"></script>
 </html>

@@ -7,31 +7,211 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <header class="container mx-auto header bg-white flex items-center justify-between px-8 py-5">
-        <!-- logo -->
-        <h1 class="w-3/12">
-            <a href="/index.html"><img src="./images/logo.png" alt="" width="150"></a>
-        </h1>
-        <!-- Search -->
-    <form class="flex items-center form-width">   
-        <label for="simple-search" class="sr-only">Search</label>
-            <input type="text" id="simple-search" class="border border-red-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 w-full p-2.5  dark:bg-red-700 dark:border-red-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search items..." required>
-        <button type="submit" class="p-2.5 ml-3 text-md font-medium text-white bg-red-300 rounded-lg border border-red-300 hover:bg-red-300 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">
-            <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+  <header
+  class="container mx-auto header bg-white p-4 flex flex-col md:flex-row items-center justify-between"
+>
+  <!-- Mobile Navigation (Logo, Search Icon, Hamburger Menu, and Cart) -->
+  <div class="md:hidden flex items-center justify-between w-full">
+    <!-- Logo -->
+    <a href="/index.html">
+      <img
+        src="./images/logo.png"
+        alt=""
+        width="150"
+      />
+    </a>
+
+    <!-- Icons (Search, Hamburger Menu, Cart) -->
+    <div class="flex items-center space-x-4">
+      <!-- Search Icon -->
+      <a
+        href="#"
+        class="text-gray-900"
+      >
+        <svg
+          class="h-6 w-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M21 21l-5-5M15 10a7 7 0 1 0-14 0 7 7 0 0 0 14 0z"
+          ></path>
+        </svg>
+      </a>
+
+      <!-- Hamburger Menu -->
+      <button
+        id="mobile-menu-button"
+        class="text-gray-900 focus:outline-none"
+      >
+        <svg
+          class="h-6 w-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16m-7 6h7"
+          ></path>
+        </svg>
+      </button>
+
+      <!-- Cart Icon -->
+      <a href="">
+        <svg
+          class="h-6 w-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <a href="">
+            <svg
+              class="h-8 p-1 text-red-300 hover:text-red-500 duration-200"
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="far"
+              data-icon="shopping-cart"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 576 512"
+              class="svg-inline--fa fa-shopping-cart fa-w-18 fa-7x"
+            >
+              <path
+                fill="currentColor"
+                d="M551.991 64H144.28l-8.726-44.608C133.35 8.128 123.478 0 112 0H12C5.373 0 0 5.373 0 12v24c0 6.627 5.373 12 12 12h80.24l69.594 355.701C150.796 415.201 144 430.802 144 448c0 35.346 28.654 64 64 64s64-28.654 64-64a63.681 63.681 0 0 0-8.583-32h145.167a63.681 63.681 0 0 0-8.583 32c0 35.346 28.654 64 64 64 35.346 0 64-28.654 64-64 0-18.136-7.556-34.496-19.676-46.142l1.035-4.757c3.254-14.96-8.142-29.101-23.452-29.101H203.76l-9.39-48h312.405c11.29 0 21.054-7.869 23.452-18.902l45.216-208C578.695 78.139 567.299 64 551.991 64zM208 472c-13.234 0-24-10.766-24-24s10.766-24 24-24 24 10.766 24 24-10.766 24-24 24zm256 0c-13.234 0-24-10.766-24-24s10.766-24 24-24 24 10.766 24 24-10.766 24-24 24zm23.438-200H184.98l-31.31-160h368.548l-34.78 160z"
+                class=""
+              ></path>
             </svg>
-            <span class="sr-only">Search</span>
-        </button>
+          </a>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <nav
+    class="hidden md:flex items-center md:space-x-4 w-full md:w-auto flex items-center justify-between"
+  >
+    <!-- Logo for Larger Screens -->
+    <a href="/index.html">
+      <img
+        src="./images/logo.png"
+        alt=""
+        width="150"
+      />
+    </a>
+
+    <!-- Search Bar -->
+    <form class="hidden md:flex items-center mb-4 md:mb-0 w-full md:w-1/2">
+      <label
+        for="simple-search"
+        class="sr-only"
+        >Search</label
+      >
+      <input
+        type="text"
+        id="simple-search"
+        class="border border-red-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 w-full p-3"
+        placeholder="Search items..."
+        required
+      />
+      <button
+        type="submit"
+        class="p-3 ml-3 text-md font-medium text-white bg-red-300 rounded-lg border border-red-300 hover:bg-red-300 focus:ring-4 focus:outline-none focus:ring-red-300"
+      >
+        Search
+      </button>
     </form>
 
-        <!-- buttons --->
-        <div class="w-3/12 flex justify-end ">
-            <button type="button" class="focus:outline-none text-white bg-red-300 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-md text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-700">Login</button>
-            <a href="">
-                <svg class="h-8 p-1 text-red-300 hover:text-red-500 duration-200" aria-hidden="true" focusable="false" data-prefix="far" data-icon="shopping-cart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-shopping-cart fa-w-18 fa-7x"><path fill="currentColor" d="M551.991 64H144.28l-8.726-44.608C133.35 8.128 123.478 0 112 0H12C5.373 0 0 5.373 0 12v24c0 6.627 5.373 12 12 12h80.24l69.594 355.701C150.796 415.201 144 430.802 144 448c0 35.346 28.654 64 64 64s64-28.654 64-64a63.681 63.681 0 0 0-8.583-32h145.167a63.681 63.681 0 0 0-8.583 32c0 35.346 28.654 64 64 64 35.346 0 64-28.654 64-64 0-18.136-7.556-34.496-19.676-46.142l1.035-4.757c3.254-14.96-8.142-29.101-23.452-29.101H203.76l-9.39-48h312.405c11.29 0 21.054-7.869 23.452-18.902l45.216-208C578.695 78.139 567.299 64 551.991 64zM208 472c-13.234 0-24-10.766-24-24s10.766-24 24-24 24 10.766 24 24-10.766 24-24 24zm256 0c-13.234 0-24-10.766-24-24s10.766-24 24-24 24 10.766 24 24-10.766 24-24 24zm23.438-200H184.98l-31.31-160h368.548l-34.78 160z" class=""></path></svg>
-            </a>
-        </div>
-    </header>
+    <!-- Navbar Links for Larger Screens -->
+    <div
+      class="hidden w-full md:flex md:w-auto"
+      id="navbar-default "
+    >
+      <ul
+        class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+      >
+        <li>
+          <a
+            href="#"
+            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-300 md:p-0 dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-300 md:p-0 dark:text-white md:dark:hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+            >About</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- Login Button and Cart Icon for Larger Screens -->
+    <div class="hidden md:flex items-center space-x-4">
+      <!-- Signup -->
+
+      <button
+        type="button"
+        class="text-white bg-red-300 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-md text-sm px-5 py-2.5"
+      >
+        Login
+      </button>
+      <!-- Login Button -->
+      <button
+        type="button"
+        class="text-white bg-red-300 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-md text-sm px-5 py-2.5"
+      >
+        Register
+      </button>
+
+      <!-- Shopping Cart Icon -->
+      <a href="">
+        <svg
+          class="h-8 p-1 text-red-300 hover:text-red-500 duration-200"
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="far"
+          data-icon="shopping-cart"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 576 512"
+          class="svg-inline--fa fa-shopping-cart fa-w-18 fa-7x"
+        >
+          <a href="">
+            <svg
+              class="h-8 p-1 text-red-300 hover:text-red-500 duration-200"
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="far"
+              data-icon="shopping-cart"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 576 512"
+              class="svg-inline--fa fa-shopping-cart fa-w-18 fa-7x"
+            >
+              <path
+                fill="currentColor"
+                d="M551.991 64H144.28l-8.726-44.608C133.35 8.128 123.478 0 112 0H12C5.373 0 0 5.373 0 12v24c0 6.627 5.373 12 12 12h80.24l69.594 355.701C150.796 415.201 144 430.802 144 448c0 35.346 28.654 64 64 64s64-28.654 64-64a63.681 63.681 0 0 0-8.583-32h145.167a63.681 63.681 0 0 0-8.583 32c0 35.346 28.654 64 64 64 35.346 0 64-28.654 64-64 0-18.136-7.556-34.496-19.676-46.142l1.035-4.757c3.254-14.96-8.142-29.101-23.452-29.101H203.76l-9.39-48h312.405c11.29 0 21.054-7.869 23.452-18.902l45.216-208C578.695 78.139 567.299 64 551.991 64zM208 472c-13.234 0-24-10.766-24-24s10.766-24 24-24 24 10.766 24 24-10.766 24-24 24zm256 0c-13.234 0-24-10.766-24-24s10.766-24 24-24 24 10.766 24 24-10.766 24-24 24zm23.438-200H184.98l-31.31-160h368.548l-34.78 160z"
+                class=""
+              ></path>
+            </svg>
+          </a>
+        </svg>
+      </a>
+    </div>
+  </nav>
+</header>
 
     <!-- About Us -->
 

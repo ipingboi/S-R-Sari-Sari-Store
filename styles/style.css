@@ -1,7 +1,9 @@
-.bg-red-300 {
-  background-color: #e484bc;
-}
+
 
 .form-width {
   width: 1000px;
+}
+
+nav {
+  flex: auto;
 }

@@ -382,8 +382,14 @@
                 </div>
                 <div class="col-span-2 pt-3">
                     <div class="flex items-center space-x-2 text-sm justify-between">
-                        <span class="text-gray-400">2 x €30.99</span>
-                        <span class="text-pink-400 font-semibold inline-block">€61.98</span>
+                      <div class=" flex flex-row w-28 h-8 bg-transparent rounded-lg">
+
+                        <input type="number"
+                            class="flex items-center w-full font-semibold text-center text-gray-700 placeholder-gray-700 bg-gray-100 outline-none dark:text-gray-400 dark:placeholder-gray-400 dark:bg-gray-900 focus:outline-none text-md hover:text-black"
+                            placeholder="1">
+                    </div>
+                        <span class="text-gray-400"> x 30.99</span>
+                        <span class="text-pink-400 font-semibold inline-block">30.99</span>
                     </div>
                 </div>
             </li>
@@ -397,8 +403,14 @@
                 </div>
                 <div class="col-span-2 pt-3">
                     <div class="flex items-center space-x-2 text-sm justify-between">
-                        <span class="text-gray-400">1 x €785</span>
-                        <span class="text-pink-400 font-semibold inline-block">€785</span>
+                      <div class=" flex flex-row w-28 h-8 bg-transparent rounded-lg">
+
+                        <input type="number"
+                            class="flex items-center w-full font-semibold text-center text-gray-700 placeholder-gray-700 bg-gray-100 outline-none dark:text-gray-400 dark:placeholder-gray-400 dark:bg-gray-900 focus:outline-none text-md hover:text-black"
+                            placeholder="1">
+                    </div>
+                        <span class="text-gray-400"> x 785</span>
+                        <span class="text-pink-400 font-semibold inline-block">785</span>
                     </div>
                 </div>
             </li>
@@ -418,38 +430,9 @@
             <span>€846.98</span>
         </div>
     </div>
-    <div class="rounded-md w-3/4">
-        <form id="payment-form" method="POST" action="">
-            <section>
-                <h2 class="uppercase tracking-wide text-lg font-semibold text-gray-700 my-2">Shipping & Billing Information</h2>
-                <fieldset class="mb-3 bg-white shadow-lg rounded text-gray-600">
-                    <label class="flex border-b border-gray-200 h-12 py-3 items-center">
-                        <span class="text-right px-2">Name</span>
-                        <input name="name" class="focus:outline-none px-3" placeholder="Try Odinsson" required="">
-                    </label>
-                    <label class="flex border-b border-gray-200 h-12 py-3 items-center">
-                        <span class="text-right px-2">Email</span>
-                        <input name="email" type="email" class="focus:outline-none px-3" placeholder="try@example.com" required="">
-                    </label>
-                    <label class="flex border-b border-gray-200 h-12 py-3 items-center">
-                        <span class="text-right px-2">Address</span>
-                        <input name="address" class="focus:outline-none px-3" placeholder="">
-                    </label>
-                    <label class="flex border-b border-gray-200 h-12 py-3 items-center">
-                        <span class="text-right px-2">City</span>
-                        <input name="city" class="focus:outline-none px-3" placeholder="Antipolo">
-                    </label>
-                    <label class="xl:w-1/4 xl:inline-flex py-3 items-center flex xl:border-none border-t border-gray-200 py-3">
-                        <span class="text-right px-2 xl:px-0 xl:text-none">Phone Number</span>
-                        <input name="postal_code" class="focus:outline-none px-3" placeholder="">
-                    </label>
-                </fieldset>
-            </section>
-        </form>
-    </div>
     <div class="w-3/4">
     <button class=" submit-button px-4 py-3 rounded-full bg-pink-400 text-white focus:ring focus:outline-none w-full text-xl font-semibold transition-colors">
-        Pay €846.98
+        Complete Order
     </button>
 </div>
     </div>
